@@ -1,0 +1,21 @@
+[
+  {
+    "type": "ajax",
+    "nodeId": "1",
+    "start": 1445883210010,
+    "end": 1445883210040,
+    "callbackEnd": 1445883210070,
+    "callbackDuration": 220,
+    "method": "GET",
+    "domain": "foo.com:80",
+    "path": "/api/qux/2",
+    "status": 200,
+    "requestBodySize": 0,
+    "responseBodySize": 0,
+    "requestedWith": "XMLHttpRequest",
+    "children": [],
+    "guid": "92c84ff2c479f97b",
+    "traceId": "c3a8ad2fd09a2cb8",
+    "timestamp": 1567099870261
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "type": "timer",
+    "start": 1445883210438,
+    "end": 1445883210448,
+    "callbackEnd": 1445883210448,
+    "callbackDuration": 0,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": [
+      {
+        "type": "timer",
+        "start": 1445883210449,
+        "end": 1445883210459,
+        "callbackEnd": 1445883210459,
+        "callbackDuration": 0,
+        "method": "setTimeout",
+        "timerDuration": 0,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,386 @@
+{
+    "name": "example",
+    "version": 3,
+    "nodeTypes": [
+    {
+      "type": "interaction",
+      "extends": "baseNode",
+      "id": 1,
+      "fields": [
+      {
+        "name": "children",
+        "type": "nodeList",
+        "nodeType": "baseNode"
+      },
+      {
+        "name": "start",
+        "type": "timestamp",
+        "relative": "first"
+      },
+      {
+        "name": "end",
+        "type": "timestamp",
+        "relative": "previous"
+      },
+      {
+        "name": "callbackEnd",
+        "type": "timestamp",
+        "relative": "first"
+      },
+      {
+        "name": "callbackDuration",
+        "type": "integer",
+        "defaultValue": 0
+      },
+      {
+        "name": "trigger",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "initialPageURL",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "oldURL",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "newURL",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "customName",
+        "type": "string",
+        "nullable": true,
+        "defaultValue": null
+      },
+      {
+        "name": "category",
+        "type": "enum",
+        "valueType": "string",
+        "values": ["Initial page load", "Route change", "Custom"],
+        "defaultValue": "Initial page load"
+      },
+      {
+        "name": "navTiming",
+        "type": "node",
+        "nodeType": "navTiming",
+        "nullable": true
+      }
+      ]
+    },
+    {
+      "type": "ajax",
+      "id": 2,
+      "extends": "timedNode",
+      "fields": [
+      {
+        "name": "method",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "status",
+        "type": "integer",
+        "defaultValue": 0
+      },
+      {
+        "name": "domain",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "path",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "requestBodySize",
+        "type": "integer",
+        "defaultValue": 0
+      },
+      {
+        "name": "responseBodySize",
+        "type": "integer",
+        "defaultValue": 0
+      }
+      ]
+    },
+    {
+      "type": "customEnd",
+      "id": 3,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "time",
+        "type": "timestamp",
+        "relative": "first",
+        "defaultValue": 0
+      }
+      ]
+    },
+    {
+      "type": "customTracer",
+      "id": 4,
+      "extends": "timedNode",
+      "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "stringAttribute",
+      "id": 5,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "doubleAttribute",
+      "id": 6,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "defaultValue": ""
+      },
+      {
+        "name": "value",
+        "type": "double",
+        "defaultValue": 0
+      }
+      ]
+    },
+    {
+      "type": "trueAttribute",
+      "id": 7,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "falseAttribute",
+      "id": 8,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "nullAttribute",
+      "id": 9,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "key",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "apmAttributes",
+      "id": 10,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "obfuscatedAttributes",
+        "type": "string",
+        "defaultValue": ""
+      }
+      ]
+    },
+    {
+      "type": "navTiming",
+      "id": 11,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "type": "timestamp",
+        "name": "unloadEventStart",
+        "nullable": true,
+        "relative": "first"
+      },
+      {
+        "type": "timestamp",
+        "name": "redirectStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "unloadEventEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "redirectEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "fetchStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domainLookupStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domainLookupEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "connectStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "secureConnectionStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "connectEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "requestStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "responseStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "responseEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domLoading",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domInteractive",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domContentLoadedEventStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domContentLoadedEventEnd",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "domComplete",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "loadEventStart",
+        "nullable": true,
+        "relative": "previous"
+      },
+      {
+        "type": "timestamp",
+        "name": "loadEventEnd",
+        "nullable": true,
+        "relative": "previous"
+      }
+      ]
+    },
+    {
+      "type": "baseNode",
+      "id": 12,
+      "extends": null,
+      "fields": []
+    },
+    {
+      "type": "timedNode",
+      "id": 13,
+      "extends": "baseNode",
+      "fields": [
+      {
+        "name": "children",
+        "type": "nodeList",
+        "nodeType": "baseNode"
+      },
+      {
+        "name": "start",
+        "type": "timestamp",
+        "relative": "first"
+      },
+      {
+        "name": "end",
+        "type": "timestamp",
+        "relative": "previous"
+      },
+      {
+        "name": "callbackEnd",
+        "type": "timestamp",
+        "relative": "previous"
+      },
+      {
+        "name": "callbackDuration",
+        "type": "integer",
+        "defaultValue": 0
+      }
+      ]
+    }
+  ]
+}

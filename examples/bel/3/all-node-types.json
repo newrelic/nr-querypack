@@ -1,0 +1,114 @@
+[
+  {
+    "type": "interaction",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "callbackEnd": 1445883210210,
+    "callbackDuration": 200,
+    "trigger": "initialPageLoad",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "customName": "custom name from api",
+    "category": "Initial page load",
+    "queueTime": 50,
+    "appTime": 100,
+    "previousRouteName": "foo",
+    "targetRouteName": "bar",
+    "navTiming": {
+      "type": "navTiming",
+      "unloadEventStart": 1445883210010,
+      "redirectStart": 1445883210020,
+      "unloadEventEnd": 1445883210030,
+      "redirectEnd": 1445883210040,
+      "fetchStart": 1445883210050,
+      "domainLookupStart": 1445883210060,
+      "domainLookupEnd": 1445883210070,
+      "connectStart": 1445883210080,
+      "secureConnectionStart": null,
+      "connectEnd": 1445883210100,
+      "requestStart": 1445883210110,
+      "responseStart": 1445883210120,
+      "responseEnd": 1445883210130,
+      "domLoading": 1445883210140,
+      "domInteractive": 1445883210150,
+      "domContentLoadedEventStart": 1445883210160,
+      "domContentLoadedEventEnd": 1445883210170,
+      "domComplete": 1445883210180,
+      "loadEventStart": 1445883210190,
+      "loadEventEnd": 1445883210200
+    },
+    "children": [
+      {
+        "type": "stringAttribute",
+        "key": "string key",
+        "value": "string value"
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "double key",
+        "value": 1.23
+      },
+      {
+        "type": "trueAttribute",
+        "key": "true key"
+      },
+      {
+        "type": "falseAttribute",
+        "key": "false key"
+      },
+      {
+        "type": "nullAttribute",
+        "key": "null key"
+      },
+      {
+        "type": "apmAttributes",
+        "obfuscatedAttributes": "encoded data..."
+      },
+      {
+        "type": "ajax",
+        "start": 1445883210000,
+        "end": 1445883210050,
+        "callbackEnd": 1445883210060,
+        "callbackDuration": 210,
+        "method": "POST",
+        "domain": "foo.com:80",
+        "path": "/api/qux",
+        "status": 200,
+        "requestBodySize": 0,
+        "responseBodySize": 0,
+        "children": [],
+        "requestedWith": "fetch"
+      },
+      {
+        "type": "ajax",
+        "start": 1445883210010,
+        "end": 1445883210040,
+        "callbackEnd": 1445883210070,
+        "callbackDuration": 220,
+        "method": "GET",
+        "domain": "foo.com:80",
+        "path": "/api/qux/2",
+        "status": 200,
+        "requestBodySize": 0,
+        "responseBodySize": 0,
+        "requestedWith": "XMLHttpRequest",
+        "children": []
+      },
+      {
+        "type": "customEnd",
+        "time": 1445883210046
+      },
+      {
+        "type": "customTracer",
+        "start": 1445883210046,
+        "end": 1445883210056,
+        "callbackEnd": 1445883210090,
+        "callbackDuration": 240,
+        "tracedCallbackDuration": 10,
+        "name": "custom tracer",
+        "children": []
+      }
+    ]
+  }
+]

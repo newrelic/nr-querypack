@@ -1,0 +1,44 @@
+[
+  {
+    "type": "interaction",
+    "start": 0,
+    "end": 500,
+    "callbackEnd": 50,
+    "callbackDuration": 200,
+    "trigger": "initialPageLoad",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "customName": "custom name from api",
+    "category": "Initial page load",
+    "queueTime": 0,
+    "appTime": 0,
+    "previousRouteName": null,
+    "targetRouteName": null,
+    "navTiming": {
+      "type": "navTiming",
+      "unloadEventStart": null,
+      "redirectStart": null,
+      "unloadEventEnd": null,
+      "redirectEnd": null,
+      "fetchStart": 100,
+      "domainLookupStart": null,
+      "domainLookupEnd": null,
+      "connectStart": null,
+      "secureConnectionStart": null,
+      "connectEnd": null,
+      "requestStart": null,
+      "responseStart": null,
+      "responseEnd": null,
+      "domLoading": null,
+      "domInteractive": null,
+      "domContentLoadedEventStart": null,
+      "domContentLoadedEventEnd": null,
+      "domComplete": null,
+      "loadEventStart": null,
+      "loadEventEnd": null
+    },
+    "children": [
+    ]
+  }
+]

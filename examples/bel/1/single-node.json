@@ -1,0 +1,10 @@
+[
+  {
+    "type": "timer",
+    "start": 1445883210438,
+    "end": 1445883210448,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": []
+  }
+]

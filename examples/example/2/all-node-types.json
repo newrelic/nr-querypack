@@ -1,0 +1,104 @@
+[
+  {
+    "type": "interaction",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "callbackEnd": 1445883210210,
+    "callbackDuration": 200,
+    "initiatorEvent": "click",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "customName": "custom name from api",
+    "isRouteChange": true,
+    "children": [
+      {
+        "type": "stringAttribute",
+        "key": "string key",
+        "value": "string value"
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "double key",
+        "value": 1.23
+      },
+      {
+        "type": "trueAttribute",
+        "key": "true key"
+      },
+      {
+        "type": "falseAttribute",
+        "key": "false key"
+      },
+      {
+        "type": "nullAttribute",
+        "key": "null key"
+      },
+      {
+        "type": "apmAttributes",
+        "obfuscatedAttributes": "encoded data..."
+      },
+      {
+        "type": "elementData",
+        "nodeName": "a",
+        "textContent": "click me",
+        "contentLength": 8,
+        "topOffset": 101,
+        "leftOffset": 154,
+        "width": 99,
+        "height": 88,
+        "idAttribute": "the-best-link",
+        "nameAttribute": "",
+        "typeAttribute": "",
+        "hrefAttribute": "/free-tacos",
+        "cssPath": "body div a.class1.class1#the-best-link"
+      },
+      {
+        "type": "fetch",
+        "start": 1445883210000,
+        "end": 1445883210050,
+        "callbackEnd": 1445883210060,
+        "callbackDuration": 210,
+        "method": "POST",
+        "domain": "foo.com:80",
+        "path": "/api/qux",
+        "children": []
+      },
+      {
+        "type": "xhr",
+        "start": 1445883210010,
+        "end": 1445883210040,
+        "callbackEnd": 1445883210070,
+        "callbackDuration": 220,
+        "method": "GET",
+        "domain": "foo.com:80",
+        "path": "/api/qux/2",
+        "status": 200,
+        "children": []
+      },
+      {
+        "type": "timer",
+        "start": 1445883210041,
+        "end": 1445883210055,
+        "callbackEnd": 1445883210080,
+        "callbackDuration": 230,
+        "method": "setTimeout",
+        "timerDuration": 10,
+        "children": []
+      },
+      {
+        "type": "customEnd",
+        "time": 1445883210046
+      },
+      {
+        "type": "customTracer",
+        "start": 1445883210046,
+        "end": 1445883210056,
+        "callbackEnd": 1445883210090,
+        "callbackDuration": 240,
+        "name": "custom tracer",
+        "children": []
+      }
+    ]
+  }
+]

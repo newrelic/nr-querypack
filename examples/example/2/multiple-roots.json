@@ -1,0 +1,44 @@
+[
+  {
+    "type": "timer",
+    "start": 1445883210438,
+    "end": 1445883210448,
+    "callbackEnd": 1445883210448,
+    "callbackDuration": 0,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": []
+  },
+  {
+    "type": "timer",
+    "start": 1445883210448,
+    "end": 1445883210468,
+    "callbackEnd": 1445883210468,
+    "callbackDuration": 0,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": [
+      {
+        "type": "timer",
+        "start": 1445883210468,
+        "end": 1445883210473,
+
+        "callbackEnd": 1445883210473,
+        "callbackDuration": 0,
+        "method": "setTimeout",
+        "timerDuration": 0,
+        "children": []
+      }
+    ]
+  },
+  {
+    "type": "timer",
+    "start": 1445883210468,
+    "end": 1445883210498,
+    "callbackEnd": 1445883210498,
+    "callbackDuration": 0,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": []
+  }
+]

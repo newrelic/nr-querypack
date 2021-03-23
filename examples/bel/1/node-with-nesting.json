@@ -1,0 +1,36 @@
+[
+  {
+    "type": "timer",
+    "start": 1445883210438,
+    "end": 1445883210448,
+    "method": "setTimeout",
+    "timerDuration": 0,
+    "children": [
+      {
+        "type": "timer",
+        "start": 1445883210449,
+        "end": 1445883210459,
+        "method": "setTimeout",
+        "timerDuration": 0,
+        "children": [
+          {
+            "type": "timer",
+            "start": 1445883210459,
+            "end": 1445883210460,
+            "method": "setTimeout",
+            "timerDuration": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "timer",
+        "start": 1445883210449,
+        "end": 1445883210460,
+        "method": "setTimeout",
+        "timerDuration": 5,
+        "children": []
+      }
+    ]
+  }
+]
