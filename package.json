@@ -1,7 +1,7 @@
 {
   "name": "@newrelic/nr-querypack",
   "version": "3.12.0",
-  "description": "querypack is a serialization format used by the browser agent",
+  "description": "nr-querypack is a serialization format used by the New Relic browser agent",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
