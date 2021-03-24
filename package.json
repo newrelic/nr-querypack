@@ -9,16 +9,14 @@
     "pretest": "npm run build && npm run lint",
     "test": "node ./test/index.js",
     "build": "node ./build.js",
+    "postinstall": "npm run build",
     "precommit": "npm run lint && npm run build",
-    "prepublish": "npm run build",
-    "set-version": "npm version --no-git-tag-version $ACTUAL_VERSION && npm run commit-version",
-    "commit-version": "git -c user.name='jenkins-build-bot' -c user.email='<jenkins_build_bot@newrelic.com>' commit -am \"bump npm version to v$ACTUAL_VERSION\"",
-    "clear-generated": "rm -rf src/main/java/com/newrelic/querypack/bel3"
+    "prepublish": "npm run build"
   },
   "contributors": [
-    "Michael Hayes <mhayes@newrelic.com>",
-    "Katie Leonard <kleonard@newrelic.com>",
-    "Ben Weintraub <ben@newrelic.com>"
+    "Michael Hayes",
+    "Katie Leonard",
+    "Ben Weintraub"
   ],
   "license": "UNLICENSED",
   "dependencies": {
