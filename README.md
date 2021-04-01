@@ -55,6 +55,10 @@ For example, to add a new version of the `bel` schema, copy these:
 * examples/bel/CURRENT_VERSION/*
 * schema/bel/CURRENT_VERSION.qpschema
 
+### Release
+
+New versions of querypack should include a corresponding new GitHub release ([link to create here](https://github.com/newrelic/nr-querypack/releases/new)) documenting changes introduced in the new version.
+
 ## Testing
 
 Compile & run test cases, schemas, grammar and parser for QueryPack:
