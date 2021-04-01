@@ -1,0 +1,61 @@
+[
+  {
+    "type": "interaction",
+    "start": 1445883210000,
+    "end": 1445883210100,
+    "callbackEnd": 1445883210100,
+    "callbackDuration": 0,
+    "trigger": "click",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "category": "Route change",
+    "customName": "custom name from api",
+    "navTiming": null,
+    "children": [
+      {
+        "type": "ajax",
+        "start": 1445883210010,
+        "end": 1445883210040,
+        "callbackEnd": 1445883210040,
+        "callbackDuration": 0,
+        "method": "GET",
+        "domain": "foo.com:80",
+        "path": "/api/qux/2",
+        "status": 200,
+        "requestBodySize": 0,
+        "responseBodySize": 0,
+        "children": [
+         {
+            "type": "customTracer",
+            "start": 1445883210044,
+            "end": 1445883210054,
+            "callbackEnd": 1445883210094,
+            "callbackDuration": 244,
+            "name": "custom tracer #1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "customTracer",
+        "start": 1445883210044,
+        "end": 1445883210054,
+        "callbackEnd": 1445883210094,
+        "callbackDuration": 244,
+        "name": "custom tracer #2",
+        "children": [
+          {
+            "type": "customTracer",
+            "start": 1445883210044,
+            "end": 1445883210054,
+            "callbackEnd": 1445883210094,
+            "callbackDuration": 244,
+            "name": "custom tracer #3",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

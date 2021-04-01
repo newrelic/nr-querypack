@@ -1,0 +1,25 @@
+[
+  {
+    "type": "timing",
+    "name": "fp",
+    "value": 1435,
+    "attributes": []
+  },
+  {
+    "type": "timing",
+    "name": "fi",
+    "value": 541,
+    "attributes": [
+      {
+        "type": "stringAttribute",
+        "key": "eventType",
+        "value": "click"
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "fid",
+        "value": 10.01
+      }
+    ]
+  }
+]

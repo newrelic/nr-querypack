@@ -1,0 +1,13 @@
+[
+  {
+    "type": "fetch",
+    "start": 1445883210438,
+    "end": 1445883210448,
+    "callbackEnd": 1445883210448,
+    "callbackDuration": 0,
+    "method": "GET",
+    "domain": "something,other;thing\\whatever\\\\,,",
+    "path": "/foo",
+    "children": []
+  }
+]

@@ -1,0 +1,11 @@
+[
+ {
+    "type": "customTracer",
+    "start": 1445883210044,
+    "end": 1445883210044,
+    "callbackEnd": 1445883210044,
+    "callbackDuration": 0,
+    "name": "custom tracer",
+    "children": []
+  }
+]

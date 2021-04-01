@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+schemas/all.json
+examples/all.json
+lib/parser/querypack.js

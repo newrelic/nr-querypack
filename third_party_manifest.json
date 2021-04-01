@@ -1,0 +1,143 @@
+{
+  "lastUpdated": "Fri Mar 26 2021 15:46:02 GMT-0700 (Pacific Daylight Time)",
+  "projectName": "nr-querypack",
+  "projectUrl": "https://github.com/newrelic/nr-querypack",
+  "includeDev": true,
+  "dependencies": {
+    "concat-stream@1.6.2": {
+      "name": "concat-stream",
+      "version": "1.6.2",
+      "range": "^1.5.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/maxogden/concat-stream",
+      "versionedRepoUrl": "https://github.com/maxogden/concat-stream/tree/v1.6.2",
+      "licenseFile": "node_modules/concat-stream/LICENSE",
+      "licenseUrl": "https://github.com/maxogden/concat-stream/blob/v1.6.2/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Max Ogden",
+      "email": "max@maxogden.com"
+    },
+    "glob@5.0.15": {
+      "name": "glob",
+      "version": "5.0.15",
+      "range": "^5.0.15",
+      "licenses": "ISC",
+      "repoUrl": "https://github.com/isaacs/node-glob",
+      "versionedRepoUrl": "https://github.com/isaacs/node-glob/tree/v5.0.15",
+      "licenseFile": "node_modules/glob/LICENSE",
+      "licenseUrl": "https://github.com/isaacs/node-glob/blob/v5.0.15/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Isaac Z. Schlueter",
+      "email": "i@izs.me",
+      "url": "http://blog.izs.me/"
+    },
+    "joi@7.3.0": {
+      "name": "joi",
+      "version": "7.3.0",
+      "range": "^7.1.0",
+      "licenses": "BSD-3-Clause",
+      "repoUrl": "https://github.com/hapijs/joi",
+      "versionedRepoUrl": "https://github.com/hapijs/joi/tree/v7.3.0",
+      "licenseFile": "node_modules/joi/LICENSE",
+      "licenseUrl": "https://github.com/hapijs/joi/blob/v7.3.0/LICENSE",
+      "licenseTextSource": "file"
+    },
+    "pegjs@0.9.0": {
+      "name": "pegjs",
+      "version": "0.9.0",
+      "range": "^0.9.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/pegjs/pegjs",
+      "versionedRepoUrl": "https://github.com/pegjs/pegjs/tree/v0.9.0",
+      "licenseFile": "node_modules/pegjs/LICENSE",
+      "licenseUrl": "https://github.com/pegjs/pegjs/blob/v0.9.0/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "David Majda",
+      "email": "david@majda.cz",
+      "url": "http://majda.cz/"
+    },
+    "yargs@3.32.0": {
+      "name": "yargs",
+      "version": "3.32.0",
+      "range": "^3.27.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/bcoe/yargs",
+      "versionedRepoUrl": "https://github.com/bcoe/yargs/tree/v3.32.0",
+      "licenseFile": "node_modules/yargs/LICENSE",
+      "licenseUrl": "https://github.com/bcoe/yargs/blob/v3.32.0/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Alex Ford",
+      "email": "Alex.Ford@CodeTunnel.com",
+      "url": "http://CodeTunnel.com"
+    }
+  },
+  "devDependencies": {
+    "eslint-config-standard@4.4.0": {
+      "name": "eslint-config-standard",
+      "version": "4.4.0",
+      "range": "^4.4.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/feross/eslint-config-standard",
+      "versionedRepoUrl": "https://github.com/feross/eslint-config-standard/tree/v4.4.0",
+      "licenseFile": "node_modules/eslint-config-standard/LICENSE",
+      "licenseUrl": "https://github.com/feross/eslint-config-standard/blob/v4.4.0/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Feross Aboukhadijeh",
+      "email": "feross@feross.org",
+      "url": "http://feross.org/"
+    },
+    "eslint-plugin-standard@1.3.3": {
+      "name": "eslint-plugin-standard",
+      "version": "1.3.3",
+      "range": "^1.3.1",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/xjamundx/eslint-plugin-standard",
+      "versionedRepoUrl": "https://github.com/xjamundx/eslint-plugin-standard/tree/v1.3.3",
+      "licenseFile": "node_modules/eslint-plugin-standard/LICENSE",
+      "licenseUrl": "https://github.com/xjamundx/eslint-plugin-standard/blob/v1.3.3/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Jamund Ferguson",
+      "email": "jamund@gmail.com"
+    },
+    "eslint@1.10.3": {
+      "name": "eslint",
+      "version": "1.10.3",
+      "range": "^1.6.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/eslint/eslint",
+      "versionedRepoUrl": "https://github.com/eslint/eslint/tree/v1.10.3",
+      "licenseFile": "node_modules/eslint/LICENSE",
+      "licenseUrl": "https://github.com/eslint/eslint/blob/v1.10.3/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Nicholas C. Zakas",
+      "email": "nicholas+npm@nczconsulting.com"
+    },
+    "husky@0.10.2": {
+      "name": "husky",
+      "version": "0.10.2",
+      "range": "^0.10.1",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/typicode/husky",
+      "versionedRepoUrl": "https://github.com/typicode/husky/tree/v0.10.2",
+      "licenseFile": "node_modules/husky/LICENSE",
+      "licenseUrl": "https://github.com/typicode/husky/blob/v0.10.2/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Typicode",
+      "email": "typicode@gmail.com"
+    },
+    "tape@4.13.3": {
+      "name": "tape",
+      "version": "4.13.3",
+      "range": "^4.2.2",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/substack/tape",
+      "versionedRepoUrl": "https://github.com/substack/tape/tree/v4.13.3",
+      "licenseFile": "node_modules/tape/LICENSE",
+      "licenseUrl": "https://github.com/substack/tape/blob/v4.13.3/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "James Halliday",
+      "email": "mail@substack.net",
+      "url": "http://substack.net"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "type": "customTracer",
+    "nodeId": "0",
+    "start": 1445883210046,
+    "end": 1445883210056,
+    "callbackEnd": 1445883210090,
+    "callbackDuration": 240,
+    "tracedCallbackDuration": null,
+    "name": "line 1\nline 2\n",
+    "children": []
+  }
+]

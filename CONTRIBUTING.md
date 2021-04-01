@@ -14,9 +14,21 @@ Before submitting an Issue, please search for similar ones in the
 
 ## Pull Requests
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-2. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+If you’re planning on contributing a new feature or an otherwise complex contribution, we kindly ask you to start a conversation with the maintainer team by opening up a Github issue first.
+
+### General Guidelines
+
+This project is licensed under the Apache-2.0 license. Any third party libraries added as dependencies of the project must have a similarly permissive open source license, e.g. MIT.
+
+### Coding Style Guidelines/Conventions
+
+We use eslint to enforce certain coding standards. Please see our .eslintrc file for specific rule configuration.
+
+### Testing Guidelines
+
+If you want to introduce a change to the schema used by the [New Relic Browser Agent](https://github.com/newrelic/newrelic-browser-agent), then create a new version of the [bel](https://github.com/newrelic/nr-querypack/schemas/bel) schema as described [here](https://github.com/newrelic/nr-querypack#adding-a-new-version).
+
+New schema versions must be accompanied by corresponding tests. This is done by adding files in the [examples](https://github.com/newrelic/nr-querypack/tree/main/examples) folder that represent test cases for encoding and decoding. Running `npm test` will automatically include all test cases in this folder.
 
 ## Contributor License Agreement
 

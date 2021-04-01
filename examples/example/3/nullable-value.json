@@ -1,0 +1,40 @@
+[
+  {
+    "type": "interaction",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "callbackEnd": 1445883210210,
+    "callbackDuration": 200,
+    "trigger": "click",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "customName": null,
+    "category": "Route change",
+    "navTiming": null,
+    "children": [{
+      "type": "customTracer",
+      "start": 1445883210044,
+      "end": 1445883210054,
+      "callbackEnd": 1445883210094,
+      "callbackDuration": 244,
+      "name": "custom tracer",
+      "children": []
+    }]
+  },
+  {
+    "type": "interaction",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "callbackEnd": 1445883210210,
+    "callbackDuration": 200,
+    "trigger": "click",
+    "initialPageURL": "http://foo.com/bar/baz",
+    "oldURL": "http://foo.com/bar/1",
+    "newURL": "http://foo.com/baz/2",
+    "customName": null,
+    "category": "Route change",
+    "navTiming": null,
+    "children": []
+  }
+]
