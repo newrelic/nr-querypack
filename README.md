@@ -67,7 +67,7 @@ $ npm test
 
 ## Support
 
-For issues related to querypack, please feel free to either open a [GitHub issue in this repository](https://github.com/newrelic/nr-querypack/issues) or see our [support thread in the New Relic Community](TBD).
+For issues related to querypack, please feel free to either open a [GitHub issue in this repository](https://github.com/newrelic/nr-querypack/issues) or see our [support thread in the New Relic Community](https://discuss.newrelic.com/t/new-relic-browser-nr-querypack-is-open-source/144320).
 
 Should you need assistance with New Relic products, you are in good hands with several support channels.
 
