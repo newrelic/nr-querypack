@@ -46,18 +46,21 @@ If you have it in your clipboard, you can use it like this:
 pbpaste | tr -d '[:space:]' | bin/qputil.js decode - | less
 ```
 
-### Adding a new version
-
-Any grouped changes to the querypack schema should require a new version bump.
-
-For example, to add a new version of the `bel` schema, copy these:
+### Adding new bel schema version
+Sometimes when developing a new feature, the structure of the serialized data the Browser Agent sends needs to change.
+To do this, follow the example structure below, to create files with an updated version of the schema:
 
 * examples/bel/CURRENT_VERSION/*
 * schema/bel/CURRENT_VERSION.qpschema
 
-### Release
+Any changes to the bel schema should require a new version bump.
 
-New versions of querypack should include a corresponding new GitHub release ([link to create here](https://github.com/newrelic/nr-querypack/releases/new)) documenting changes introduced in the new version.
+This version bump is not a breaking change because each version lives in a separate file, but will require an update to the agent to encode the new format and the data processing pipeline to decode using the new format.
+
+#### Adding a new schema
+The browser agent uses querypack to encode data using versions of the bel schema, however, querypack is flexible and supports custom schema for non-Browser-Agent uses.
+
+To create new folders in the `/examples` and `/schema` directories with the same name as the new schema you would like to create.
 
 ## Testing
 
