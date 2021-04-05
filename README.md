@@ -67,6 +67,8 @@ $ npm test
 
 ## Support
 
+For issues related to querypack, please feel free to either open a [GitHub issue in this repository](https://github.com/newrelic/nr-querypack/issues) or see our [support thread in the New Relic Community](TBD).
+
 Should you need assistance with New Relic products, you are in good hands with several support channels.
 
 * [New Relic Documentation](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring/): Comprehensive guidance for using our platform
