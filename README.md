@@ -46,14 +46,16 @@ If you have it in your clipboard, you can use it like this:
 pbpaste | tr -d '[:space:]' | bin/qputil.js decode - | less
 ```
 
-### Adding a new version
-
-Any grouped changes to the querypack schema should require a new version bump.
-
-For example, to add a new version of the `bel` schema, copy these:
+### Adding new bel schema version
+Sometimes when developing a new feature, the structure of the serialized data the Browser Agent sends needs to change.
+To do this, follow the example structure below, to create files with an updated version of the schema:
 
 * examples/bel/CURRENT_VERSION/*
 * schema/bel/CURRENT_VERSION.qpschema
+
+Any changes to the bel schema should require a new version bump.
+
+This version bump is not a breaking change because each version lives in a separate file, but will require an update to the agent to encode the new format and the data processing pipeline to decode using the new format.
 
 ## Testing
 
@@ -64,6 +66,8 @@ $ npm test
 ```
 
 ## Support
+
+For issues related to querypack, please feel free to either open a [GitHub issue in this repository](https://github.com/newrelic/nr-querypack/issues) or see our [support thread in the New Relic Community](https://discuss.newrelic.com/t/new-relic-browser-nr-querypack-is-open-source/144320).
 
 Should you need assistance with New Relic products, you are in good hands with several support channels.
 
