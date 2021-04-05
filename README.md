@@ -57,11 +57,6 @@ Any changes to the bel schema should require a new version bump.
 
 This version bump is not a breaking change because each version lives in a separate file, but will require an update to the agent to encode the new format and the data processing pipeline to decode using the new format.
 
-#### Adding a new schema
-The browser agent uses querypack to encode data using versions of the bel schema, however, querypack is flexible and supports custom schema for non-Browser-Agent uses.
-
-To create new folders in the `/examples` and `/schema` directories with the same name as the new schema you would like to create.
-
 ## Testing
 
 Compile & run test cases, schemas, grammar and parser for QueryPack:
