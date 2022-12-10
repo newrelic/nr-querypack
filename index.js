@@ -1,11 +1,11 @@
-var schemas = require('./lib/schemas')
-var examples = require('./lib/examples')
-var encode = require('./lib/encoder')
-var decode = require('./lib/decoder')
+const schemas = require('./lib/schemas')
+const examples = require('./lib/examples')
+const encode = require('./lib/encoder')
+const decode = require('./lib/decoder')
 
 module.exports = {
-  encode: encode,
-  decode: decode,
-  schemas: schemas,
-  examples: examples
+  encode,
+  decode,
+  schemas,
+  examples
 }

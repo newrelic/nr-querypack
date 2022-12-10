@@ -1,31 +1,31 @@
 #!/usr/bin/env node
 
-var fs = require('fs')
-var path = require('path')
-var glob = require('glob')
-var PEG = require('pegjs')
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob')
+const PEG = require('pegjs')
 
-var examplesDir = path.resolve(__dirname, 'examples')
-var schemasDir = path.resolve(__dirname, 'schemas')
-var examplesOutPath = path.join(examplesDir, 'all.json')
-var schemasOutPath = path.join(schemasDir, 'all.json')
+const examplesDir = path.resolve(__dirname, 'examples')
+const schemasDir = path.resolve(__dirname, 'schemas')
+const examplesOutPath = path.join(examplesDir, 'all.json')
+const schemasOutPath = path.join(schemasDir, 'all.json')
 
-var examplesGlob = path.join(examplesDir, '**/*.querypack')
-var schemasGlob = path.join(schemasDir, '*/*.qpschema')
+const examplesGlob = path.join(examplesDir, '**/*.querypack')
+const schemasGlob = path.join(schemasDir, '*/*.qpschema')
 
-var libDir = path.resolve(__dirname, 'lib')
-var grammarPath = path.join(libDir, 'parser', 'querypack.pegjs')
-var parserOutPath = path.join(libDir, 'parser', 'querypack.js')
+const libDir = path.resolve(__dirname, 'lib')
+const grammarPath = path.join(libDir, 'parser', 'querypack.pegjs')
+const parserOutPath = path.join(libDir, 'parser', 'querypack.js')
 
-var cases = []
-var schemas = {}
+const cases = []
+const schemas = {}
 
 glob(schemasGlob, function (err, results) {
   if (err) throw err
 
   results.forEach(function (schemaPath) {
-    var schemaNameAndVersion = schemaPath.replace(/^.*\/([^\/]+)\/([^\/]+)\.qpschema$/, '$1.$2')
-    var schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
+    const schemaNameAndVersion = schemaPath.replace(/^.*\/([^/]+)\/([^/]+)\.qpschema$/, '$1.$2')
+    const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
     schemas[schemaNameAndVersion] = schema
   })
 
@@ -36,12 +36,12 @@ glob(examplesGlob, function (err, results) {
   if (err) throw err
 
   results.forEach(function (queryPackPath) {
-    var jsonPath = queryPackPath.replace(/\.querypack$/, '.json')
-    var queryPackContent = fs.readFileSync(queryPackPath, 'utf8')
-    var jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
+    const jsonPath = queryPackPath.replace(/\.querypack$/, '.json')
+    const queryPackContent = fs.readFileSync(queryPackPath, 'utf8')
+    const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
 
-    var schemaId = queryPackContent.split(';')[0]
-    var schema = schemas[schemaId]
+    const schemaId = queryPackContent.split(';')[0]
+    const schema = schemas[schemaId]
 
     if (!schema) {
       throw new Error("Did not find schema with identifier: '" + schemaId + "'")
@@ -51,15 +51,15 @@ glob(examplesGlob, function (err, results) {
       name: path.basename(queryPackPath, '.querypack'),
       querypack: queryPackContent,
       json: JSON.stringify(jsonContent),
-      schema: schema
+      schema
     })
   })
 
-  var mergedOutput = JSON.stringify(cases, null, 2)
+  const mergedOutput = JSON.stringify(cases, null, 2)
 
   fs.writeFileSync(examplesOutPath, mergedOutput)
 })
 
-var grammar = fs.readFileSync(grammarPath, 'utf8')
-var parserSource = PEG.buildParser(grammar, { output: 'source', exportVar: 'module.exports' })
+const grammar = fs.readFileSync(grammarPath, 'utf8')
+const parserSource = PEG.buildParser(grammar, { output: 'source', exportVar: 'module.exports' })
 fs.writeFileSync(parserOutPath, 'module.exports = ' + parserSource)

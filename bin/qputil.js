@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-var concat = require('concat-stream')
-var yargs = require('yargs')
-var fs = require('fs')
+const concat = require('concat-stream')
+const yargs = require('yargs')
+const fs = require('fs')
 
-var querypack = require('../index')
-var lintSchema = require('../lib/schema-linter')
-var schemaPath
-var infilePath
+const querypack = require('../index')
+const lintSchema = require('../lib/schema-linter')
+let schemaPath
+let infilePath
 
-var config = yargs
+const config = yargs
   .usage('$0 command')
 
   .boolean('r')
@@ -51,7 +51,7 @@ var config = yargs
   .alias('h', 'help')
   .argv
 
-var command = config._[0]
+const command = config._[0]
 
 switch (command) {
   case 'decode-batch':
@@ -80,17 +80,18 @@ switch (command) {
     process.exit(1)
 }
 
+let schema
 if (schemaPath) {
   try {
-    var schemaText = fs.readFileSync(schemaPath)
-    var schema = JSON.parse(schemaText)
+    const schemaText = fs.readFileSync(schemaPath)
+    schema = JSON.parse(schemaText)
   } catch (err) {
     console.error("Could not load schema at '" + schemaPath + "': " + err)
     process.exit(1)
   }
 }
 
-var infileStream
+let infileStream
 if (infilePath === '-') {
   infileStream = process.stdin
 } else {
@@ -101,14 +102,14 @@ switch (command) {
   case 'encode':
     infileStream.pipe(concat(function (body) {
       body = JSON.parse(body.toString())
-      var result = querypack.encode(body, schema, config)
+      const result = querypack.encode(body, schema, config)
       process.stdout.write(result)
     }))
     break
 
   case 'decode':
     infileStream.pipe(concat(function (body) {
-      var nodes = querypack.decode(body.toString(), {decodeDates: config.r})
+      const nodes = querypack.decode(body.toString(), { decodeDates: config.r })
       console.log(JSON.stringify(nodes, null, 2))
     }))
     break
@@ -122,15 +123,15 @@ switch (command) {
   case 'validate':
     infileStream.pipe(concat(function (body) {
       body = body.toString()
-      var nodes = querypack.decode(body, {strict: true})
+      const nodes = querypack.decode(body, { strict: true })
       console.log(JSON.stringify(nodes, null, 2))
     }))
     break
 
   case 'validate-schema':
     infileStream.pipe(concat(function (body) {
-      var schema = JSON.parse(body)
-      var errors = lintSchema(schema)
+      const schema = JSON.parse(body)
+      const errors = lintSchema(schema)
       if (errors && errors.length) {
         console.log('Schema is not valid.\nErrors:\n')
         errors.forEach(function (err) {
@@ -146,7 +147,7 @@ switch (command) {
   case 'decode-batch':
     infileStream.pipe(concat(function (body) {
       body = JSON.parse(body)
-      var events = body && body.results && body && body.results[0] && body.results[0].events
+      const events = body && body.results && body && body.results[0] && body.results[0].events
       if (!events) {
         return console.log('no events found, should be formatted as {body: {results: [{events: [**events**]}]}}')
       }
@@ -154,7 +155,7 @@ switch (command) {
       events.forEach(event => {
         if (!event.event) return event
         if (event.event['nr.querypack']) {
-          event.event.decodedQuerypack = querypack.decode(event.event['nr.querypack'], {decodeDates: config.r})
+          event.event.decodedQuerypack = querypack.decode(event.event['nr.querypack'], { decodeDates: config.r })
         }
       })
       console.log(JSON.stringify(body, null, 2))
@@ -163,18 +164,18 @@ switch (command) {
 }
 
 function dumpForDebugging (inputText) {
-  var parser = require('../lib/parser/querypack')
+  const parser = require('../lib/parser/querypack')
 
-  var result = parser.parse(inputText.toString())
+  const result = parser.parse(inputText.toString())
 
   console.log('Parsed nodes:')
-  for (i = 0; i < result.nodes.length; i++) {
-    var node = result.nodes[i]
+  for (let i = 0; i < result.nodes.length; i++) {
+    const node = result.nodes[i]
     console.log('[' + i + ']: ' + [node.typeId, node.childCount].concat(node.fields).join(','))
   }
   console.log('')
 
-  var strings = []
+  const strings = []
   result.nodes.forEach(function (node) {
     node.fields.forEach(function (field) {
       if (typeof field === 'string') strings.push(field)
@@ -182,7 +183,7 @@ function dumpForDebugging (inputText) {
   })
 
   console.log('String table:')
-  for (var i = 0; i < strings.length; i++) {
+  for (let i = 0; i < strings.length; i++) {
     console.log(i + ' [' + i.toString(36) + ']: ' + strings[i])
   }
 }
