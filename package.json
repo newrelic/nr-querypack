@@ -20,7 +20,6 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "ci": "^2.2.0",
     "concat-stream": "^1.5.0",
     "glob": "^5.0.15",
     "joi": "^17.7.0",
