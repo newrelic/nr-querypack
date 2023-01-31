@@ -1,0 +1,46 @@
+name: NR-QueryPack CI
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: ubuntu:latest
+      options: --user=1001
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Linting
+        run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: ubuntu:latest
+      options: --user=1001
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Linting
+        run: npm run test

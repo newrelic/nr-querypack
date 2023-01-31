@@ -31,7 +31,7 @@
         "responseBodySize": 0,
         "requestedWith": "XMLHttpRequest",
         "children": [
-         {
+          {
             "type": "customTracer",
             "start": 1445883210044,
             "end": 1445883210054,

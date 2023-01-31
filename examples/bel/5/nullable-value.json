@@ -20,17 +20,19 @@
     "targetRouteName": null,
     "firstPaint": null,
     "firstContentfulPaint": null,
-    "children": [{
-      "type": "customTracer",
-      "nodeId": "0",
-      "start": 1445883210044,
-      "end": 1445883210054,
-      "callbackEnd": 1445883210094,
-      "callbackDuration": 244,
-      "tracedCallbackDuration": null,
-      "name": "custom tracer",
-      "children": []
-    }]
+    "children": [
+      {
+        "type": "customTracer",
+        "nodeId": "0",
+        "start": 1445883210044,
+        "end": 1445883210054,
+        "callbackEnd": 1445883210094,
+        "callbackDuration": 244,
+        "tracedCallbackDuration": null,
+        "name": "custom tracer",
+        "children": []
+      }
+    ]
   },
   {
     "id": "11111111-1111-1111-1111-111111111111",

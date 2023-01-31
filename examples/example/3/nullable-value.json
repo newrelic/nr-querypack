@@ -12,15 +12,17 @@
     "customName": null,
     "category": "Route change",
     "navTiming": null,
-    "children": [{
-      "type": "customTracer",
-      "start": 1445883210044,
-      "end": 1445883210054,
-      "callbackEnd": 1445883210094,
-      "callbackDuration": 244,
-      "name": "custom tracer",
-      "children": []
-    }]
+    "children": [
+      {
+        "type": "customTracer",
+        "start": 1445883210044,
+        "end": 1445883210054,
+        "callbackEnd": 1445883210094,
+        "callbackDuration": 244,
+        "name": "custom tracer",
+        "children": []
+      }
+    ]
   },
   {
     "type": "interaction",
