@@ -1,0 +1,7 @@
+/node_modules/
+*.qpschema
+*.pegjs
+package-lock.json
+schemas/all.json
+examples/all.json
+lib/parser/querypack.js

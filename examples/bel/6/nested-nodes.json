@@ -36,7 +36,7 @@
         "responseBodySize": 0,
         "requestedWith": "XMLHttpRequest",
         "children": [
-         {
+          {
             "type": "customTracer",
             "nodeId": "1",
             "start": 1445883210044,
