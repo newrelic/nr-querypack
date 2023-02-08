@@ -18,6 +18,7 @@
     "test": "jest",
     "build": "node ./build.js",
     "format": "prettier -w .",
+    "format:check": "prettier --check .",
     "prepack": "npm run build",
     "prepare": "husky install",
     "prepublish": "npm run build"
