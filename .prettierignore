@@ -6,3 +6,10 @@ schemas/all.json
 examples/all.json
 lib/parser/querypack.js
 coverage/**/*
+
+# Do not format these static/generated files
+cla.md
+CONTRIBUTING.md
+THIRD_PARTY_NOTICES.md
+third_party_manifest.json
+LICENSE

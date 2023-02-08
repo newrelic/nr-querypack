@@ -6,7 +6,7 @@ module.exports = {
     // Use es2019 for Node 12+ support (https://node.green/)
     es2019: true,
   },
-  extends: ['eslint:recommended', 'standard', 'prettier'],
+  extends: ["eslint:recommended", "standard", "prettier"],
   overrides: [
     {
       files: ["**/*.test.js"],
@@ -20,6 +20,6 @@ module.exports = {
     "no-void": "off",
     "object-shorthand": "off",
     "no-use-before-define": "off",
-    "dot-notation": "off"
+    "dot-notation": "off",
   },
 };
