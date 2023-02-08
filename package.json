@@ -19,6 +19,7 @@
     "build": "node ./build.js",
     "format": "prettier -w .",
     "format:check": "prettier --check .",
+    "third-party-updates": "oss third-party manifest --includeOptDeps && oss third-party notices --includeOptDeps",
     "prepack": "npm run build",
     "prepare": "husky install",
     "prepublish": "npm run build"
@@ -31,6 +32,7 @@
     "yargs": "^3.27.0"
   },
   "devDependencies": {
+    "@newrelic/newrelic-oss-cli": "^0.1.2",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^4.4.0",
