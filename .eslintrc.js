@@ -7,6 +7,13 @@ module.exports = {
     es2019: true,
   },
   extends: ["eslint:recommended", "prettier"],
-  overrides: [],
+  overrides: [
+    {
+      files: ["**/*.test.js"],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   rules: {},
 };
