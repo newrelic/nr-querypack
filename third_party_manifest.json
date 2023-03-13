@@ -1,8 +1,9 @@
 {
-  "lastUpdated": "Fri Mar 26 2021 15:46:02 GMT-0700 (Pacific Daylight Time)",
+  "lastUpdated": "Mon Feb 13 2023 08:15:33 GMT-0600 (Central Standard Time)",
   "projectName": "nr-querypack",
   "projectUrl": "https://github.com/newrelic/nr-querypack",
   "includeDev": true,
+  "includeOptDeps": true,
   "dependencies": {
     "concat-stream@1.6.2": {
       "name": "concat-stream",
@@ -72,72 +73,107 @@
     }
   },
   "devDependencies": {
-    "eslint-config-standard@4.4.0": {
+    "@newrelic/newrelic-oss-cli@0.1.2": {
+      "name": "@newrelic/newrelic-oss-cli",
+      "version": "0.1.2",
+      "range": "^0.1.2",
+      "licenses": "Apache-2.0",
+      "repoUrl": "https://github.com/newrelic/newrelic-oss-cli",
+      "versionedRepoUrl": "https://github.com/newrelic/newrelic-oss-cli/tree/v0.1.2",
+      "licenseFile": "node_modules/@newrelic/newrelic-oss-cli/LICENSE",
+      "licenseUrl": "https://github.com/newrelic/newrelic-oss-cli/blob/v0.1.2/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "New Relic"
+    },
+    "eslint-config-standard@17.0.0": {
       "name": "eslint-config-standard",
-      "version": "4.4.0",
-      "range": "^4.4.0",
+      "version": "17.0.0",
+      "range": "^17.0.0",
       "licenses": "MIT",
-      "repoUrl": "https://github.com/feross/eslint-config-standard",
-      "versionedRepoUrl": "https://github.com/feross/eslint-config-standard/tree/v4.4.0",
+      "repoUrl": "https://github.com/standard/eslint-config-standard",
+      "versionedRepoUrl": "https://github.com/standard/eslint-config-standard/tree/v17.0.0",
       "licenseFile": "node_modules/eslint-config-standard/LICENSE",
-      "licenseUrl": "https://github.com/feross/eslint-config-standard/blob/v4.4.0/LICENSE",
+      "licenseUrl": "https://github.com/standard/eslint-config-standard/blob/v17.0.0/LICENSE",
       "licenseTextSource": "file",
       "publisher": "Feross Aboukhadijeh",
       "email": "feross@feross.org",
-      "url": "http://feross.org/"
+      "url": "https://feross.org"
     },
-    "eslint-plugin-standard@1.3.3": {
-      "name": "eslint-plugin-standard",
-      "version": "1.3.3",
-      "range": "^1.3.1",
+    "eslint-plugin-import@2.27.5": {
+      "name": "eslint-plugin-import",
+      "version": "2.27.5",
+      "range": "^2.27.5",
       "licenses": "MIT",
-      "repoUrl": "https://github.com/xjamundx/eslint-plugin-standard",
-      "versionedRepoUrl": "https://github.com/xjamundx/eslint-plugin-standard/tree/v1.3.3",
-      "licenseFile": "node_modules/eslint-plugin-standard/LICENSE",
-      "licenseUrl": "https://github.com/xjamundx/eslint-plugin-standard/blob/v1.3.3/LICENSE",
+      "repoUrl": "https://github.com/import-js/eslint-plugin-import",
+      "versionedRepoUrl": "https://github.com/import-js/eslint-plugin-import/tree/v2.27.5",
+      "licenseFile": "node_modules/eslint-plugin-import/LICENSE",
+      "licenseUrl": "https://github.com/import-js/eslint-plugin-import/blob/v2.27.5/LICENSE",
       "licenseTextSource": "file",
-      "publisher": "Jamund Ferguson",
-      "email": "jamund@gmail.com"
+      "publisher": "Ben Mosher",
+      "email": "me@benmosher.com"
     },
-    "eslint@1.10.3": {
+    "eslint-plugin-n@15.6.1": {
+      "name": "eslint-plugin-n",
+      "version": "15.6.1",
+      "range": "^15.6.1",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/eslint-community/eslint-plugin-n",
+      "versionedRepoUrl": "https://github.com/eslint-community/eslint-plugin-n/tree/v15.6.1",
+      "licenseFile": "node_modules/eslint-plugin-n/LICENSE",
+      "licenseUrl": "https://github.com/eslint-community/eslint-plugin-n/blob/v15.6.1/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Toru Nagashima"
+    },
+    "eslint-plugin-promise@6.1.1": {
+      "name": "eslint-plugin-promise",
+      "version": "6.1.1",
+      "range": "^6.1.1",
+      "licenses": "ISC",
+      "repoUrl": "https://github.com/eslint-community/eslint-plugin-promise",
+      "versionedRepoUrl": "https://github.com/eslint-community/eslint-plugin-promise/tree/v6.1.1",
+      "licenseFile": "node_modules/eslint-plugin-promise/LICENSE.md",
+      "licenseUrl": "https://github.com/eslint-community/eslint-plugin-promise/blob/v6.1.1/LICENSE.md",
+      "licenseTextSource": "file",
+      "publisher": "jden",
+      "email": "jason@denizac.org"
+    },
+    "eslint@8.34.0": {
       "name": "eslint",
-      "version": "1.10.3",
-      "range": "^1.6.0",
+      "version": "8.34.0",
+      "range": "^8.33.0",
       "licenses": "MIT",
       "repoUrl": "https://github.com/eslint/eslint",
-      "versionedRepoUrl": "https://github.com/eslint/eslint/tree/v1.10.3",
+      "versionedRepoUrl": "https://github.com/eslint/eslint/tree/v8.34.0",
       "licenseFile": "node_modules/eslint/LICENSE",
-      "licenseUrl": "https://github.com/eslint/eslint/blob/v1.10.3/LICENSE",
+      "licenseUrl": "https://github.com/eslint/eslint/blob/v8.34.0/LICENSE",
       "licenseTextSource": "file",
       "publisher": "Nicholas C. Zakas",
       "email": "nicholas+npm@nczconsulting.com"
     },
-    "husky@0.10.2": {
+    "husky@8.0.3": {
       "name": "husky",
-      "version": "0.10.2",
-      "range": "^0.10.1",
+      "version": "8.0.3",
+      "range": "^8.0.0",
       "licenses": "MIT",
       "repoUrl": "https://github.com/typicode/husky",
-      "versionedRepoUrl": "https://github.com/typicode/husky/tree/v0.10.2",
+      "versionedRepoUrl": "https://github.com/typicode/husky/tree/v8.0.3",
       "licenseFile": "node_modules/husky/LICENSE",
-      "licenseUrl": "https://github.com/typicode/husky/blob/v0.10.2/LICENSE",
+      "licenseUrl": "https://github.com/typicode/husky/blob/v8.0.3/LICENSE",
       "licenseTextSource": "file",
       "publisher": "Typicode",
       "email": "typicode@gmail.com"
     },
-    "tape@4.13.3": {
-      "name": "tape",
-      "version": "4.13.3",
-      "range": "^4.2.2",
+    "jest@29.4.2": {
+      "name": "jest",
+      "version": "29.4.2",
+      "range": "^29.4.2",
       "licenses": "MIT",
-      "repoUrl": "https://github.com/substack/tape",
-      "versionedRepoUrl": "https://github.com/substack/tape/tree/v4.13.3",
-      "licenseFile": "node_modules/tape/LICENSE",
-      "licenseUrl": "https://github.com/substack/tape/blob/v4.13.3/LICENSE",
-      "licenseTextSource": "file",
-      "publisher": "James Halliday",
-      "email": "mail@substack.net",
-      "url": "http://substack.net"
+      "repoUrl": "https://github.com/facebook/jest",
+      "versionedRepoUrl": "https://github.com/facebook/jest/tree/v29.4.2",
+      "licenseFile": "node_modules/jest/LICENSE",
+      "licenseUrl": "https://github.com/facebook/jest/blob/v29.4.2/LICENSE",
+      "licenseTextSource": "file"
     }
-  }
+  },
+  "optionalDependencies": {}
 }
