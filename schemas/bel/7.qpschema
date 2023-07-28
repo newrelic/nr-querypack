@@ -62,7 +62,7 @@
         "name": "category",
         "type": "enum",
         "valueType": "string",
-        "values": ["Initial page load", "Route change", "Custom"],
+        "values": ["Initial page load", "Route change", "Custom", "Route change page load"],
         "defaultValue": "Initial page load"
       },
       {
