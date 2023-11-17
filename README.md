@@ -8,6 +8,8 @@ This repository also contains a reference encoder and decoder (`qputil`) to prod
 
 For details about the design of the querypack format, see [DESIGN.md](DESIGN.md).
 
+For the repo used by the backend to deserialize BEL payloads see [browser/querypack](https://source.datanerd.us/browser/querypack)
+
 ## Installation
 
 ```
