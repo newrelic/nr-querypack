@@ -1,0 +1,16 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceMark",
+    "start": 1672531200,
+    "end": null,
+    "duration": null,
+    "payload": [
+      {
+        "type": "stringAttribute",
+        "key": "name",
+        "value": "component a load start"
+      }
+    ]
+  }
+]

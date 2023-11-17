@@ -1,0 +1,162 @@
+{
+  "name": "bel",
+  "version": 8,
+  "nodeTypes": [
+    {
+      "type": "generic",
+      "extends": "baseNode",
+      "id": 1,
+      "fields": [
+        {
+          "name": "eventType",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "start",
+          "type": "timestamp",
+          "nullable": true,
+          "relative": "first"
+        },
+        {
+          "name": "end",
+          "type": "timestamp",
+          "nullable": true,
+          "relative": "previous"
+        },
+        {
+          "name": "duration",
+          "type": "integer",
+          "nullable": true
+        },
+        {
+          "name": "payload",
+          "type": "nodeList",
+          "nodeType": "baseNode"
+        }
+      ]
+    },
+    {
+      "type": "stringAttribute",
+      "id": 2,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "type": "integerAttribute",
+      "id": 3,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "value",
+          "type": "integer",
+          "defaultValue": 0
+        }
+      ]
+    },
+    {
+      "type": "doubleAttribute",
+      "id": 4,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "value",
+          "type": "double",
+          "defaultValue": 0
+        }
+      ]
+    },
+    {
+      "type": "trueAttribute",
+      "id": 5,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "type": "falseAttribute",
+      "id": 6,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "type": "nullAttribute",
+      "id": 7,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "type": "apmAttributes",
+      "id": 8,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "obfuscatedAttributes",
+          "type": "string",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "type": "nodeListAttribute",
+      "id": 9,
+      "extends": "baseNode",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "defaultValue": ""
+        },
+        {
+          "name": "value",
+          "type": "nodeList",
+          "nodeType": "baseNode"
+        }
+      ]
+    },
+    {
+      "type": "baseNode",
+      "id": 10,
+      "extends": null,
+      "fields": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1672531200,
+    "end": 1672531300,
+    "duration": 100,
+    "payload": [
+      {
+        "type": "stringAttribute",
+        "key": "name",
+        "value": "component a"
+      }
+    ]
+  }
+]

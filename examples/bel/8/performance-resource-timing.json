@@ -1,0 +1,132 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceResourceTiming",
+    "start": 1672531200,
+    "end": 1672531300,
+    "duration": 100,
+    "payload": [
+      {
+        "type": "stringAttribute",
+        "key": "name",
+        "value": "https://developer.mozilla.org/static/media/yes.70caad81ca5e3d9f7576.svg"
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "redirectStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "redirectEnd",
+        "value": 18.99999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "workerStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "fetchStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "domainLookupStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "domainLookupEnd",
+        "value": 18.99999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "connectionStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "secureConnectionStart",
+        "value": 18.79999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "connectionEnd",
+        "value": 18.99999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "requestStart",
+        "value": 18.39999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "responseStart",
+        "value": 18.89999999106
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "responseEnd",
+        "value": 18.99999999106
+      },
+      {
+        "type": "integerAttribute",
+        "key": "encodedBodySize",
+        "value": 727
+      },
+      {
+        "type": "integerAttribute",
+        "key": "decodedBodySize",
+        "value": 1675
+      },
+      {
+        "type": "stringAttribute",
+        "key": "initiatorType",
+        "value": "script"
+      },
+      {
+        "type": "stringAttribute",
+        "key": "nextHopProtocol",
+        "value": "h2"
+      },
+      {
+        "type": "stringAttribute",
+        "key": "renderBlockingStatus",
+        "value": "non-blocking"
+      },
+      {
+        "type": "integerAttribute",
+        "key": "responseStatus",
+        "value": 200
+      },
+      {
+        "type": "integerAttribute",
+        "key": "transferSize",
+        "value": 1027
+      },
+      {
+        "type": "nodeListAttribute",
+        "key": "serverTiming",
+        "value": [
+          {
+            "type": "stringAttribute",
+            "key": "name",
+            "value": "cache"
+          },
+          {
+            "type": "stringAttribute",
+            "key": "description",
+            "value": "Cache Read"
+          },
+          {
+            "type": "doubleAttribute",
+            "key": "duration",
+            "value": 16.2
+          }
+        ]
+      }
+    ]
+  }
+]

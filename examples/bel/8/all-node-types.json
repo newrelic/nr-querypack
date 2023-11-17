@@ -1,0 +1,53 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "duration": 200,
+    "payload": [
+      {
+        "type": "stringAttribute",
+        "key": "string key",
+        "value": "string value"
+      },
+      {
+        "type": "integerAttribute",
+        "key": "integer key",
+        "value": 1
+      },
+      {
+        "type": "doubleAttribute",
+        "key": "double key",
+        "value": 1.23
+      },
+      {
+        "type": "trueAttribute",
+        "key": "true key"
+      },
+      {
+        "type": "falseAttribute",
+        "key": "false key"
+      },
+      {
+        "type": "nullAttribute",
+        "key": "null key"
+      },
+      {
+        "type": "apmAttributes",
+        "obfuscatedAttributes": "encoded data..."
+      },
+      {
+        "type": "nodeListAttribute",
+        "key": "additionalAttributes",
+        "value": [
+          {
+            "type": "stringAttribute",
+            "key": "string key",
+            "value": "string value"
+          }
+        ]
+      }
+    ]
+  }
+]

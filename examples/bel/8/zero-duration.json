@@ -1,0 +1,10 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1445883210000,
+    "end": 1445883213210,
+    "duration": 0,
+    "payload": []
+  }
+]

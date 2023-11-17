@@ -1,0 +1,32 @@
+[
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1445883210041,
+    "end": 1445883210051,
+    "duration": 241,
+    "payload": []
+  },
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1445883210042,
+    "end": 1445883210052,
+    "duration": 242,
+    "payload": [
+      {
+        "type": "stringAttribute",
+        "key": "string key",
+        "value": "string value"
+      }
+    ]
+  },
+  {
+    "type": "generic",
+    "eventType": "PerformanceMeasure",
+    "start": 1445883210044,
+    "end": 1445883210054,
+    "duration": 244,
+    "payload": []
+  }
+]
