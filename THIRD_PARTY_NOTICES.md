@@ -17,7 +17,7 @@ code, the source code can be found at [https://github.com/newrelic/nr-querypack]
 * [concat-stream](#concat-stream)
 * [glob](#glob)
 * [joi](#joi)
-* [pegjs](#pegjs)
+* [peggy](#peggy)
 * [yargs](#yargs)
 
 **[devDependencies](#devDependencies)**
@@ -39,7 +39,7 @@ code, the source code can be found at [https://github.com/newrelic/nr-querypack]
 
 ### concat-stream
 
-This product includes source derived from [concat-stream](https://github.com/maxogden/concat-stream) ([v1.6.2](https://github.com/maxogden/concat-stream/tree/v1.6.2)), distributed under the [MIT License](https://github.com/maxogden/concat-stream/blob/v1.6.2/LICENSE):
+This product includes source derived from [concat-stream](https://github.com/maxogden/concat-stream) ([v2.0.0](https://github.com/maxogden/concat-stream/tree/v2.0.0)), distributed under the [MIT License](https://github.com/maxogden/concat-stream/blob/v2.0.0/LICENSE):
 
 ```
 The MIT License
@@ -70,12 +70,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### glob
 
-This product includes source derived from [glob](https://github.com/isaacs/node-glob) ([v5.0.15](https://github.com/isaacs/node-glob/tree/v5.0.15)), distributed under the [ISC License](https://github.com/isaacs/node-glob/blob/v5.0.15/LICENSE):
+This product includes source derived from [glob](https://github.com/isaacs/node-glob) ([v11.0.0](https://github.com/isaacs/node-glob/tree/v11.0.0)), distributed under the [ISC License](https://github.com/isaacs/node-glob/blob/v11.0.0/LICENSE):
 
 ```
 The ISC License
 
-Copyright (c) Isaac Z. Schlueter and Contributors
+Copyright (c) 2009-2023 Isaac Z. Schlueter and Contributors
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -93,77 +93,60 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ### joi
 
-This product includes source derived from [joi](https://github.com/hapijs/joi) ([v7.3.0](https://github.com/hapijs/joi/tree/v7.3.0)), distributed under the [BSD-3-Clause License](https://github.com/hapijs/joi/blob/v7.3.0/LICENSE):
+This product includes source derived from [joi](https://github.com/hapijs/joi) ([v17.13.3](https://github.com/hapijs/joi/tree/v17.13.3)), distributed under the [BSD-3-Clause License](https://github.com/hapijs/joi/blob/v17.13.3/LICENSE.md):
 
 ```
-Copyright (c) 2012-2014, Walmart and other contributors.
+Copyright (c) 2012-2022, Project contributors.
+Copyright (c) 2012-2022, Sideway. Inc.
+Copyright (c) 2012-2014, Walmart.
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * The names of any contributors may not be used to endorse or promote
-      products derived from this software without specific prior written
-      permission.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* The names of any contributors may not be used to endorse or promote products derived from this software without specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS AND CONTRIBUTORS BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-                                  *   *   *
-
-The complete list of contributors can be found at: https://github.com/hapijs/joi/graphs/contributors
-```
-
-### pegjs
-
-This product includes source derived from [pegjs](https://github.com/pegjs/pegjs) ([v0.9.0](https://github.com/pegjs/pegjs/tree/v0.9.0)), distributed under the [MIT License](https://github.com/pegjs/pegjs/blob/v0.9.0/LICENSE):
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
-Copyright (c) 2010-2015 David Majda
 
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
+### peggy
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+This product includes source derived from [peggy](https://github.com/peggyjs/peggy) ([v4.0.3](https://github.com/peggyjs/peggy/tree/v4.0.3)), distributed under the [MIT License](https://github.com/peggyjs/peggy/blob/v4.0.3/LICENSE):
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+```
+MIT License
+
+Copyright (c) 2010-2024 The Peggy AUTHORS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ```
 
 ### yargs
 
-This product includes source derived from [yargs](https://github.com/bcoe/yargs) ([v3.32.0](https://github.com/bcoe/yargs/tree/v3.32.0)), distributed under the [MIT License](https://github.com/bcoe/yargs/blob/v3.32.0/LICENSE):
+This product includes source derived from [yargs](https://github.com/yargs/yargs) ([v17.7.2](https://github.com/yargs/yargs/tree/v17.7.2)), distributed under the [MIT License](https://github.com/yargs/yargs/blob/v17.7.2/LICENSE):
 
 ```
-Copyright 2010 James Halliday (mail@substack.net)
+MIT License
 
-This project is free software released under the MIT/X11 license:
+Copyright 2010 James Halliday (mail@substack.net); Modified work Copyright 2014 Contributors (ben@npmjs.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -398,7 +381,7 @@ This product includes source derived from [@newrelic/newrelic-oss-cli](https://g
 
 ### eslint-config-standard
 
-This product includes source derived from [eslint-config-standard](https://github.com/standard/eslint-config-standard) ([v17.0.0](https://github.com/standard/eslint-config-standard/tree/v17.0.0)), distributed under the [MIT License](https://github.com/standard/eslint-config-standard/blob/v17.0.0/LICENSE):
+This product includes source derived from [eslint-config-standard](https://github.com/standard/eslint-config-standard) ([v17.1.0](https://github.com/standard/eslint-config-standard/tree/v17.1.0)), distributed under the [MIT License](https://github.com/standard/eslint-config-standard/blob/v17.1.0/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -426,7 +409,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### eslint-plugin-import
 
-This product includes source derived from [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) ([v2.27.5](https://github.com/import-js/eslint-plugin-import/tree/v2.27.5)), distributed under the [MIT License](https://github.com/import-js/eslint-plugin-import/blob/v2.27.5/LICENSE):
+This product includes source derived from [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) ([v2.29.1](https://github.com/import-js/eslint-plugin-import/tree/v2.29.1)), distributed under the [MIT License](https://github.com/import-js/eslint-plugin-import/blob/v2.29.1/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -456,7 +439,7 @@ SOFTWARE.
 
 ### eslint-plugin-n
 
-This product includes source derived from [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n) ([v15.6.1](https://github.com/eslint-community/eslint-plugin-n/tree/v15.6.1)), distributed under the [MIT License](https://github.com/eslint-community/eslint-plugin-n/blob/v15.6.1/LICENSE):
+This product includes source derived from [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n) ([v16.6.2](https://github.com/eslint-community/eslint-plugin-n/tree/v16.6.2)), distributed under the [MIT License](https://github.com/eslint-community/eslint-plugin-n/blob/v16.6.2/LICENSE):
 
 ```
 The MIT License (MIT)
@@ -486,7 +469,7 @@ SOFTWARE.
 
 ### eslint-plugin-promise
 
-This product includes source derived from [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise) ([v6.1.1](https://github.com/eslint-community/eslint-plugin-promise/tree/v6.1.1)), distributed under the [ISC License](https://github.com/eslint-community/eslint-plugin-promise/blob/v6.1.1/LICENSE.md):
+This product includes source derived from [eslint-plugin-promise](https://github.com/eslint-community/eslint-plugin-promise) ([v6.4.0](https://github.com/eslint-community/eslint-plugin-promise/tree/v6.4.0)), distributed under the [ISC License](https://github.com/eslint-community/eslint-plugin-promise/blob/v6.4.0/LICENSE.md):
 
 ```
 Copyright (c) 2020, Jamund Ferguson
@@ -507,7 +490,7 @@ THIS SOFTWARE.
 
 ### eslint
 
-This product includes source derived from [eslint](https://github.com/eslint/eslint) ([v8.34.0](https://github.com/eslint/eslint/tree/v8.34.0)), distributed under the [MIT License](https://github.com/eslint/eslint/blob/v8.34.0/LICENSE):
+This product includes source derived from [eslint](https://github.com/eslint/eslint) ([v8.57.0](https://github.com/eslint/eslint/tree/v8.57.0)), distributed under the [MIT License](https://github.com/eslint/eslint/blob/v8.57.0/LICENSE):
 
 ```
 Copyright OpenJS Foundation and other contributors, <www.openjsf.org>
@@ -534,7 +517,7 @@ THE SOFTWARE.
 
 ### husky
 
-This product includes source derived from [husky](https://github.com/typicode/husky) ([v8.0.3](https://github.com/typicode/husky/tree/v8.0.3)), distributed under the [MIT License](https://github.com/typicode/husky/blob/v8.0.3/LICENSE):
+This product includes source derived from [husky](https://github.com/typicode/husky) ([v9.1.1](https://github.com/typicode/husky/tree/v9.1.1)), distributed under the [MIT License](https://github.com/typicode/husky/blob/v9.1.1/LICENSE):
 
 ```
 MIT License
@@ -563,12 +546,12 @@ SOFTWARE.
 
 ### jest
 
-This product includes source derived from [jest](https://github.com/facebook/jest) ([v29.4.2](https://github.com/facebook/jest/tree/v29.4.2)), distributed under the [MIT License](https://github.com/facebook/jest/blob/v29.4.2/LICENSE):
+This product includes source derived from [jest](https://github.com/jestjs/jest) ([v29.7.0](https://github.com/jestjs/jest/tree/v29.7.0)), distributed under the [MIT License](https://github.com/jestjs/jest/blob/v29.7.0/LICENSE):
 
 ```
 MIT License
 
-Copyright (c) Facebook, Inc. and its affiliates.
+Copyright (c) Meta Platforms, Inc. and affiliates.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

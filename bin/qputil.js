@@ -13,14 +13,14 @@ var config = yargs
   .usage('$0 command')
 
   .boolean('r')
-  .default(false)
+  .default('r', false)
   .alias('r', 'relative-timestamps')
   .describe('r', 'if true, prints relative timestamps')
 
   .command('encode', 'encode from JSON to querypack', function (args) {
-    args
+    return args
       .usage('$0 encode <input path> <schema path>')
-      .demand(3, 'Please specify a schema and an input file to encode')
+      .demand(2, 'Please specify a schema and an input file to encode')
       .boolean('o')
       .alias('o', 'omit-defaults')
       .default('o', true)
@@ -30,43 +30,42 @@ var config = yargs
       )
   })
   .command('decode', 'decode from querypack to JSON', function (args) {
-    args.usage('$0 decode <input path> [<schema path>]')
-    args.demand(2, 'Please specify an input file to decode')
+    return args
+      .usage('$0 decode <input path> [<schema path>]')
+      .demand(1, 'Please specify an input file to decode')
   })
   .command(
     'decode-batch',
     'decode from JSON results returned by an insights query',
     function (args) {
-      args.usage('$0 decode-batch <input path>')
-      args.demand(2, 'Please specify an input file to decode')
+      return args.usage('$0 decode-batch <input path>')
+        .demand(1, 'Please specify an input file to decode')
     }
   )
   .command(
     'debug',
     'dump a partially-decoded version of the querypack input for debugging',
     function (args) {
-      args.usage('$0 debug <input path>')
-      args.demand(2, 'Please specify an input file to decode')
+      return args.usage('$0 debug <input path>')
+        .demand(1, 'Please specify an input file to decode')
     }
   )
   .command(
     'validate',
     'validate querypack format against a schema',
     function (args) {
-      args.usage('$0 validate <input path> <schema path>')
-      args.demand(3, 'Please specify a schema and an input file to encode')
+      return args.usage('$0 validate <input path> <schema path>')
+        .demand(2, 'Please specify a schema and an input file to encode')
     }
   )
   .command('validate-schema', 'validate a querypack schema', function (args) {
-    args.usage('$0 validate-schema <schema path>')
-    args.demand(2, 'Please specify a schema to validate')
+    return args.usage('$0 validate-schema <schema path>')
+      .demand(1, 'Please specify a schema to validate')
   })
-  .demand(1, 'Please specify a command')
-  .help('h')
-  .alias('h', 'help').argv
+  .demandCommand()
+  .argv
 
 var command = config._[0]
-
 switch (command) {
   case 'decode-batch':
   case 'decode':
@@ -89,8 +88,7 @@ switch (command) {
     break
 
   default:
-    console.error('Unknown command')
-    console.log(yargs.help())
+    yargs.showHelp()
     process.exit(1)
 }
 

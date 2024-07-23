@@ -3,7 +3,7 @@
 var fs = require('fs')
 var path = require('path')
 var glob = require('glob')
-var PEG = require('pegjs')
+var peggy = require('peggy')
 
 var examplesDir = path.resolve(__dirname, 'examples')
 var schemasDir = path.resolve(__dirname, 'schemas')
@@ -20,53 +20,46 @@ var parserOutPath = path.join(libDir, 'parser', 'querypack.js')
 var cases = []
 var schemas = {}
 
-glob(schemasGlob, function (err, results) {
-  if (err) throw err
+var globedSchemas = glob.sync(schemasGlob)
+globedSchemas.forEach(function (schemaPath) {
+  var schemaNameAndVersion = schemaPath.replace(
+    /^.*\/([^/]+)\/([^/]+)\.qpschema$/,
+    '$1.$2'
+  )
+  var schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
+  schemas[schemaNameAndVersion] = schema
+})
 
-  results.forEach(function (schemaPath) {
-    var schemaNameAndVersion = schemaPath.replace(
-      /^.*\/([^/]+)\/([^/]+)\.qpschema$/,
-      '$1.$2'
+fs.writeFileSync(schemasOutPath, JSON.stringify(schemas, null, 2))
+
+var globedExamples = glob.sync(examplesGlob)
+globedExamples.forEach(function (queryPackPath) {
+  var jsonPath = queryPackPath.replace(/\.querypack$/, '.json')
+  var queryPackContent = fs.readFileSync(queryPackPath, 'utf8')
+  var jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
+
+  var schemaId = queryPackContent.split(';')[0]
+  var schema = schemas[schemaId]
+
+  if (!schema) {
+    throw new Error(
+      "Did not find schema with identifier: '" + schemaId + "'"
     )
-    var schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
-    schemas[schemaNameAndVersion] = schema
-  })
+  }
 
-  fs.writeFileSync(schemasOutPath, JSON.stringify(schemas, null, 2))
+  cases.push({
+    name: path.basename(queryPackPath, '.querypack'),
+    querypack: queryPackContent,
+    json: JSON.stringify(jsonContent),
+    schema: schema
+  })
 })
 
-glob(examplesGlob, function (err, results) {
-  if (err) throw err
-
-  results.forEach(function (queryPackPath) {
-    var jsonPath = queryPackPath.replace(/\.querypack$/, '.json')
-    var queryPackContent = fs.readFileSync(queryPackPath, 'utf8')
-    var jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
-
-    var schemaId = queryPackContent.split(';')[0]
-    var schema = schemas[schemaId]
-
-    if (!schema) {
-      throw new Error(
-        "Did not find schema with identifier: '" + schemaId + "'"
-      )
-    }
-
-    cases.push({
-      name: path.basename(queryPackPath, '.querypack'),
-      querypack: queryPackContent,
-      json: JSON.stringify(jsonContent),
-      schema: schema
-    })
-  })
-
-  var mergedOutput = JSON.stringify(cases, null, 2)
-
-  fs.writeFileSync(examplesOutPath, mergedOutput)
-})
+var mergedOutput = JSON.stringify(cases, null, 2)
+fs.writeFileSync(examplesOutPath, mergedOutput)
 
 var grammar = fs.readFileSync(grammarPath, 'utf8')
-var parserSource = PEG.buildParser(grammar, {
+var parserSource = peggy.generate(grammar, {
   output: 'source',
   exportVar: 'module.exports'
 })
