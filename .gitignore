@@ -328,3 +328,4 @@ $RECYCLE.BIN/
 schemas/all.json
 examples/all.json
 lib/parser/querypack.js
+web.js
