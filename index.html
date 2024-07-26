@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html css="color-scheme: light;" lang="en" theme="light">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="no" name="msapplication-tap-highlight"/>
+    <meta content="Encode and decode nr-querypack data." name="description"/>
+
+    <script type="text/javascript">
+      ;window.NREUM||(NREUM={});NREUM.init={privacy:{cookies_enabled:true},ajax:{deny_list:["staging-bam-cell.nr-data.net"]}};
+
+      ;NREUM.loader_config={accountID:"550352",trustKey:"1",agentID:"165384751",licenseKey:"NRBR-c7d7aa44f6c74d8ed93",applicationID:"165384751"};
+      ;NREUM.info={beacon:"staging-bam-cell.nr-data.net",errorBeacon:"staging-bam-cell.nr-data.net",licenseKey:"NRBR-c7d7aa44f6c74d8ed93",applicationID:"165384751",sa:1};
+    </script>
+    <script src="https://js-agent.newrelic.com/nr-loader-spa-1.x.x.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.1.0/dist/css/materialize.min.css"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.1.0/dist/js/materialize.min.js"></script>
+
+    <style>
+        textarea.materialize-textarea {
+            min-height: 220px;
+            max-height: 640px;
+            overflow: scroll;
+        }
+        .hide,
+        /* Some stupid okta extension bs */
+        .hiddendiv.common {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar-fixed">
+        <nav class="primary">
+            <div class="nav-wrapper">
+                <ul>
+                    <li>New Relic QueryPack</li>
+                </ul>
+                <ul class="right">
+                    <li><a href="#decode" id="decode-nav-item">Decode</a></li>
+                    <li><a href="#encode" id="encode-nav-item">Encode</a></li>
+                    <li><a href="#schemas" id="schemas-nav-item">Schemas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="site-section row hide" id="decode-section">
+            <div class="section col s12">
+                <h5>Decode from nr-querypack</h5>
+                <div class="card-panel">
+                    <div class="input-field outlined col s12">
+                                <textarea class="materialize-textarea" id="decode-input"
+                                          placeholder="Type (or paste) here..."></textarea>
+                        <label for="decode-input">Encoded data</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn filled" id="decode-submit">Decode</button>
+                </div>
+                <div class="card-panel">
+                    <div class="input-field outlined col s12">
+                                <textarea class="materialize-textarea" id="decode-output"
+                                          placeholder="Results here..." readonly></textarea>
+                        <label for="decode-output">Decoded data</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section row hide" id="encode-section">
+            <div class="section col s12">
+                <h5>Encode to nr-querypack</h5>
+                <div class="card-panel">
+                    <div class="input-field outlined col s12">
+                                <textarea class="materialize-textarea" id="encode-input"
+                                          placeholder="Type (or paste) here..."></textarea>
+                        <label for="encode-input">Decoded data</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn filled" id="encode-submit">Encode</button>
+                    <div class="input-field col s6 outlined">
+                        <select id="encode-schema-select">
+                            <option disabled selected value="">Choose your schema</option>
+                        </select>
+                        <label for="encode-schema-select">Schema</label>
+                    </div>
+                </div>
+                <div class="card-panel">
+                    <div class="input-field outlined col s12">
+                                <textarea class="materialize-textarea" id="encode-output"
+                                          placeholder="Results here..." readonly></textarea>
+                        <label for="encode-output">Encoded data</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section row hide" id="schemas-section">
+            <div class="section col s12">
+                <h5>Schemas</h5>
+                <template>
+                    <div class="section col s12">
+                        <div class="card-panel">
+                            <div class="input-field outlined col s12">
+                                <textarea class="materialize-textarea" id="schema" readonly></textarea>
+                                <label for="schema"></label>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Parser Import -->
+<script src="./web.js"></script>
+
+<!-- Navigation Code -->
+<script>
+  function processNav(hash) {
+    if (!['#decode', '#encode', '#schemas'].includes(hash)) {
+      hash = '#decode'
+    }
+
+    Array.from(document.querySelectorAll('.nav-wrapper li .active')).forEach(el =>
+      el.classList.remove('active')
+    )
+    document.querySelector(`${hash}-nav-item`).classList.add('active')
+    Array.from(document.querySelectorAll('.site-section')).forEach(el =>
+      el.classList.add('hide')
+    )
+    document.querySelector(`${hash}-section`).classList.remove('hide')
+  }
+
+  window.addEventListener('hashchange', (e) => {
+    try {
+      processNav(new URL(e.newURL).hash)
+    } catch (e) {
+      console.error(e)
+    }
+  })
+
+  if (!['#decode', '#encode', '#schemas'].includes(window.location.hash)) {
+    window.location.hash = '#decode'
+  } else {
+    processNav(window.location.hash)
+  }
+</script>
+
+<!-- Encode/Decode Code -->
+<script>
+  document.querySelector('#decode-submit').addEventListener('click', () => {
+    const input = document.querySelector('#decode-input').value
+    try {
+      const output = querypack.decode(input)
+      document.querySelector('#decode-output').value = JSON.stringify(output, null, 2)
+    } catch (e) {
+      document.querySelector('#decode-output').value = e.message
+    }
+  })
+  document.querySelector('#encode-submit').addEventListener('click', () => {
+    const input = document.querySelector('#encode-input').value
+    try {
+      const materializedSchemaSelect = M.FormSelect.getInstance(document.querySelector('#encode-schema-select'))
+      const selectedSchema = materializedSchemaSelect.getSelectedValues()[0]
+      document.querySelector('#encode-output').value = querypack.encode(JSON.parse(input), querypack.schemas[selectedSchema])
+    } catch (e) {
+      document.querySelector('#encode-output').value = e.message
+    }
+  })
+</script>
+
+<!-- Schemas Code -->
+<script>
+  function injectSchemaCard(schema) {
+    const schemasSection = document.querySelector('#schemas-section')
+    const template = schemasSection.querySelector('template')
+    const clone = template.content.cloneNode(true)
+    const textArea = clone.querySelector('textarea')
+    textArea.value = JSON.stringify(schema, null, 2)
+    textArea.id = `schema-${schema.name}`
+    const textAreaLabel = clone.querySelector('label')
+    textAreaLabel.htmlFor = textArea.id
+    textAreaLabel.textContent = `${schema.name}.${schema.version}`
+    template.parentElement.appendChild(clone)
+  }
+
+  Object.values(querypack.schemas)
+    .filter(schema => schema.name !== 'example')
+    .sort((a, b) => a.version - b.version)
+    .forEach(schema => injectSchemaCard(schema))
+  Object.values(querypack.schemas)
+    .filter(schema => schema.name === 'example')
+    .sort((a, b) => a.version - b.version)
+    .forEach(schema => injectSchemaCard(schema))
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const schemaSelect = document.querySelector('#encode-schema-select')
+
+    Object.values(querypack.schemas)
+      .filter(schema => schema.name !== 'example')
+      .sort((a, b) => a.version - b.version)
+      .forEach(schema => {
+        const option = document.createElement('option')
+        option.value = `${schema.name}.${schema.version}`
+        option.textContent = `${schema.name}.${schema.version}`
+        schemaSelect.appendChild(option)
+      })
+
+    M.FormSelect.init([schemaSelect]);
+  });
+</script>
+</body>
+</html>

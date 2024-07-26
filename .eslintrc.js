@@ -1,5 +1,5 @@
 module.exports = {
-  ignorePatterns: ['lib/parser/querypack.js', 'coverage/**/*'],
+  ignorePatterns: ['lib/parser/querypack.js', 'coverage/**/*', 'web.js'],
   env: {
     node: true,
     commonjs: true,

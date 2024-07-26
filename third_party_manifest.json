@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "Fri Jul 19 2024 16:03:21 GMT-0500 (Central Daylight Time)",
+  "lastUpdated": "Thu Jul 25 2024 10:20:19 GMT-0500 (Central Daylight Time)",
   "projectName": "nr-querypack",
   "projectUrl": "https://github.com/newrelic/nr-querypack",
   "includeOptDeps": true,
@@ -170,6 +170,54 @@
       "licenseFile": "node_modules/jest/LICENSE",
       "licenseUrl": "https://github.com/jestjs/jest/blob/v29.7.0/LICENSE",
       "licenseTextSource": "file"
+    },
+    "rollup-plugin-commonjs@10.1.0": {
+      "name": "rollup-plugin-commonjs",
+      "version": "10.1.0",
+      "range": "^10.1.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/rollup/rollup-plugin-commonjs",
+      "versionedRepoUrl": "https://github.com/rollup/rollup-plugin-commonjs/tree/v10.1.0",
+      "licenseFile": "node_modules/rollup-plugin-commonjs/LICENSE",
+      "licenseUrl": "https://github.com/rollup/rollup-plugin-commonjs/blob/v10.1.0/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Rich Harris"
+    },
+    "rollup-plugin-json@4.0.0": {
+      "name": "rollup-plugin-json",
+      "version": "4.0.0",
+      "range": "^4.0.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/rollup/rollup-plugin-json",
+      "versionedRepoUrl": "https://github.com/rollup/rollup-plugin-json/tree/v4.0.0",
+      "licenseFile": "node_modules/rollup-plugin-json/README.md",
+      "licenseUrl": "https://github.com/rollup/rollup-plugin-json/blob/v4.0.0/README.md",
+      "licenseTextSource": "spdx"
+    },
+    "rollup-plugin-node-resolve@5.2.0": {
+      "name": "rollup-plugin-node-resolve",
+      "version": "5.2.0",
+      "range": "^5.2.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/rollup/rollup-plugin-node-resolve",
+      "versionedRepoUrl": "https://github.com/rollup/rollup-plugin-node-resolve/tree/v5.2.0",
+      "licenseFile": "node_modules/rollup-plugin-node-resolve/README.md",
+      "licenseUrl": "https://github.com/rollup/rollup-plugin-node-resolve/blob/v5.2.0/README.md",
+      "licenseTextSource": "spdx",
+      "publisher": "Rich Harris",
+      "email": "richard.a.harris@gmail.com"
+    },
+    "rollup@4.19.0": {
+      "name": "rollup",
+      "version": "4.19.0",
+      "range": "^4.19.0",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/rollup/rollup",
+      "versionedRepoUrl": "https://github.com/rollup/rollup/tree/v4.19.0",
+      "licenseFile": "node_modules/rollup/LICENSE.md",
+      "licenseUrl": "https://github.com/rollup/rollup/blob/v4.19.0/LICENSE.md",
+      "licenseTextSource": "file",
+      "publisher": "Rich Harris"
     }
   }
 }
